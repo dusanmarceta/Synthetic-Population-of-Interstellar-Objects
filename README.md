@@ -46,14 +46,14 @@ If the parameters d and alpha are not defined when calling the function, it will
 Input and output parameters in the function synthetic_population are (also defined in the fucntion's docstring):
 
 input:
-    v - interstellar velocities of the ISOs (m/s)
-    pv - distribution of the interstellar velocities of ISOs given in the array "v"
-    n0 - interstellar number-density of ISOs for objects larger than d0 (objects per au^3)
-    d0 - reference diemeter (m)
-    d - list of critical diameters of the population (see example above) (m)
-    alpha - list of SFD slopes for the size ranges defined by the list d (see example above)
-    rm - radius of the model sphere where the synthetic population is to be generated (au)
-    dr - step for the numerical integration with respect to heliocentric distance (au) (see section 5.2 in Marceta, D.: Orbital Model of the Interstellar Objects in the Solar System, 2021)
+v - interstellar velocities of the ISOs (m/s)
+pv - distribution of the interstellar velocities of ISOs given in the array "v"
+n0 - interstellar number-density of ISOs for objects larger than d0 (objects per au^3)
+d0 - reference diemeter (m)
+d - list of critical diameters of the population (see example above) (m)
+alpha - list of SFD slopes for the size ranges defined by the list d (see example above)
+rm - radius of the model sphere where the synthetic population is to be generated (au)
+dr - step for the numerical integration with respect to heliocentric distance (au) (see section 5.2 in Marceta, D.: Orbital Model of the Interstellar Objects in the Solar System, 2021)
 
 output:
     q - perihelion distances [au]
