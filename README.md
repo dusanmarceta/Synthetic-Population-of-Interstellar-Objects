@@ -3,11 +3,12 @@
     Author:      Dusan Marceta
     Institution: University of Belgrade
     Email:       dmarceta@matf.bg.ac.rs
-    Date:        April 2021
+    Date:        September 2022
     Version:     1.1
 
 Required python libraries:
-numpy, scipy, random, tqdm
+
+    numpy, scipy, random, tqdm
 
 This code can be used for the generation of the synthetic population of interstellar objects  (orbits and sizes)
 in arbitrary volume of space around the Sun. The only necessary assumption is that the population of the ISOs 
