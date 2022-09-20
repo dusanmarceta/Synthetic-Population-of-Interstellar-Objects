@@ -17,13 +17,13 @@ The file statistical_method.py cantains all necesseary functions for the job to 
 distributions of the intestellar velocities of the ISOs which are commonly used. The code
 can also be used with arbitrary distribution of the interstellar velocities defined in a discrete form.
 
-*----------------------------------------------------------------------------------------------------------------------------------------------------------------*
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 GENERATING ORBITS
 
 Example of generating population with analytically defined distribution of interstellar velocities is demonstratet in example.py
 Example of generating population with discretely defined distribution of interstellar velocities is demonstratet in example_arbitrary_distribution.py
 
-*----------------------------------------------------------------------------------------------------------------------------------------------------------------*
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 GENERATING SIZES
 
 The code can generate object sizes if required via input parameters. The sizes are generated according to (broken) power law for the
@@ -41,7 +41,7 @@ The code will first calculate the total number-density for all objects inside th
 
 If the parameters d and alpha are not defined when calling the function, it will only generate orbits while number-density n0 is considered the total number-density.
 
-*----------------------------------------------------------------------------------------------------------------------------------------------------------------*
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Input and output parameters in the function synthetic_population are (also defined in the fucntion's docstring):
 
