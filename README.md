@@ -48,6 +48,7 @@ Input and output parameters in the function synthetic_population are (also defin
 input:
 
 v - interstellar velocities of the ISOs (m/s)
+
 pv - distribution of the interstellar velocities of ISOs given in the array "v"
 n0 - interstellar number-density of ISOs for objects larger than d0 (objects per au^3)
 d0 - reference diemeter (m)
@@ -57,6 +58,7 @@ rm - radius of the model sphere where the synthetic population is to be generate
 dr - step for the numerical integration with respect to heliocentric distance (au) (see section 5.2 in Marceta, D.: Orbital Model of the Interstellar Objects in the Solar System, 2021)
 
 output:
+
     q - perihelion distances [au]
     e - eccentricities
     f - true anomalies [degrees]
