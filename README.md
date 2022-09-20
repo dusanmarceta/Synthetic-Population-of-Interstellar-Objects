@@ -47,7 +47,9 @@ Input and output parameters in the function synthetic_population are (also defin
 
 input:
     v - interstellar velocities of the ISOs (m/s)
+    
     pv - distribution of the interstellar velocities of ISOs given in the array "v"
+    
     n0 - interstellar number-density of ISOs for objects larger than d0 (objects per au^3)
     d0 - reference diemeter (m)
     d - list of critical diameters of the population (see example above) (m)
