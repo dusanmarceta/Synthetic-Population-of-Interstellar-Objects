@@ -1,10 +1,10 @@
 # Synthetic-population-of-Interstellar-Obejcts
 
-Author:      Dusan Marceta
-Institution: University of Belgrade
-Email:       dmarceta@matf.bg.ac.rs
-Date:        April 2021
-Version:     1.1
+    Author:      Dusan Marceta
+    Institution: University of Belgrade
+    Email:       dmarceta@matf.bg.ac.rs
+    Date:        April 2021
+    Version:     1.1
 
 Required python libraries:
 numpy, scipy, random, tqdm
