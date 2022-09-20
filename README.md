@@ -4,7 +4,7 @@
     Institution: University of Belgrade
     Email:       dmarceta@matf.bg.ac.rs
     Date:        September 2022
-    Version:     1.1
+    Version:     1.0
 
 Required python libraries:
 
