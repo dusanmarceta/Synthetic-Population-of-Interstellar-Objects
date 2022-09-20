@@ -10,19 +10,15 @@ Required python libraries:
 
     numpy, scipy, random, tqdm
 
-This code can be used for the generation of the synthetic population of interstellar objects  (orbits and sizes)
-in arbitrary volume of space around the Sun. The only necessary assumption is that the population of the ISOs 
-in the interstellar space (far from any massive body) is homogenous and isotropic.
+This code can be used for the generation of the synthetic population of interstellar objects  (orbits and sizes) in arbitrary volume of space around the Sun. The only necessary assumption is that the population of the ISOs  in the interstellar space (far from any massive body) is homogenous and isotropic.
 
-The file statistical_method.py cantains all necesseary functions for the job to be done. It includes three characteristic
-distributions of the intestellar velocities of the ISOs which are commonly used. The code
-can also be used with arbitrary distribution of the interstellar velocities defined in a discrete form.
+The file statistical_method.py cantains all necesseary functions for the job to be done. It includes three distributions of the intestellar velocities of the ISOs which are commonly used. The code can also be used with arbitrary distribution of the interstellar velocities defined in a discrete form. For both cases the example files are provided in this distribution.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 GENERATING ORBITS
 
-Example of generating population with analytically defined distribution of interstellar velocities is demonstratet in example.py
-Example of generating population with discretely defined distribution of interstellar velocities is demonstratet in example_arbitrary_distribution.py
+- Example of generating population with analytically defined distribution of interstellar velocities is demonstrated in example.py
+- Example of generating population with discretely defined distribution of interstellar velocities is demonstrated in example_arbitrary_distribution.py
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 GENERATING SIZES
