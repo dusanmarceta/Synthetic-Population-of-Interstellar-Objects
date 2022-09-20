@@ -17,24 +17,24 @@ The file statistical_method.py cantains all necesseary functions for the job to 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 GENERATING ORBITS
 
-- Example of generating population with analytically defined distribution of interstellar velocities is demonstrated in example.py
-- Example of generating population with discretely defined distribution of interstellar velocities is demonstrated in example_arbitrary_distribution.py
+- Example of generating population with analytically defined distribution of interstellar velocities is demonstrated in example_analytical_distribution.py
+- Example of generating population with discretely defined distribution of interstellar velocities is demonstrated in example_discrete_distribution.py
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 GENERATING SIZES
 
-The code can generate object sizes if required via input parameters. The sizes are generated according to (broken) power law for the
-size-frequency distribution (SFD). In order to generate sizes, the input parameters must be defined appropriately. This is explained through the following example:
-d0=1000 - reference diameter for which the number density is defined (m)
-n0=1e-2 - number of objects per cubic au whose diameters are larger than d0
-d=[100, 500, 10000] - critical diameters of the population
-alpha=[-2, -3] - slopes of the broken power law
+The code can generate object sizes if required via input parameters. The sizes are generated according to (broken) power law for the size-frequency distribution (SFD). In order to generate sizes, the input parameters must be defined appropriately. This is explained through the following example:
+
+    d0=1000 - reference diameter for which the number density is defined (m)
+    n0=1e-2 - number of objects per cubic au whose diameters are larger than d0
+    d=[100, 500, 10000] - critical diameters of the population
+    alpha=[-2, -3] - slopes of the broken power law
 
 
 In this example, the code will generate objects with sizes ranging from 100 to 10,000 m. The referent number density is 1e-2 per cubic au for objects larger than 1000 m.
 Objects within the size range [100, 500] have SFD slope of -2, while the object within the size range [500, 10000] have slope of -3.
 
-The code will first calculate the total number-density for all objects inside the defined size-range. Afther that it will calculate their size acording to the defined SFD. 
+The code will first calculate the total number-density for all objects inside the defined size-range. After that, it will calculate their sizes acording to the defined SFD. 
 
 If the parameters d and alpha are not defined when calling the function, it will only generate orbits while number-density n0 is considered the total number-density.
 
