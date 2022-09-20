@@ -32,7 +32,7 @@ The code can generate object sizes if required via input parameters. The sizes a
 
 
 In this example, the code will generate objects with sizes ranging from 100 to 10,000 m. The referent number density is 1e-2 per cubic au for objects larger than 1000 m.
-Objects within the size range [100, 500] have SFD slope of -2, while the object within the size range [500, 10000] have slope of -3.
+Objects within the size range [100, 500) have SFD slope of -2, while the object within the size range [500, 10000] have slope of -3.
 
 The code will first calculate the total number-density for all objects inside the defined size-range. After that, it will calculate their sizes acording to the defined SFD. 
 
