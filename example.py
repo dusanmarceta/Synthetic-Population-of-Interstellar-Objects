@@ -12,10 +12,14 @@ Below are two examples, one where only orbits are generated, as well as the exam
 
 input:
     v - interstellar velocities of the ISOs (m/s)
-    pv - distribution of the interstellar velocities of ISOs given in the array "v" (Maxwell_Boltzmann distribution with sigma=26140 m/s (Eubanks et al. 2021))
-    n0 - interstellar number-density of ISOs (objects per cubic au)
-    rm - radius of the model sphere (au)
-    dr - step for the numerical integration with respect to heliocentric distance (au)
+    pv - distribution of the interstellar velocities of ISOs given in the array "v"
+    n0 - interstellar number-density of ISOs for objects larger than d_ref (objects per au^3)
+    d_ref - reference diemeter for SFD (m)
+    d - list of characteristic diameters of the population (see example above) (m)
+    alpha - list of SFD slopes for the size ranges defined by the list d (see example above)
+    rm - radius of the model sphere where the synthetic population is to be generated (au)
+    dr - step for the numerical integration with respect to heliocentric distance (au) 
+    (see section 5.2 in Marceta, D.: Synthetic Population of Interstellar Objects in the Solar System, 2022)
 
 output:
     q - perihelion distance (au)
