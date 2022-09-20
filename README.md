@@ -17,8 +17,7 @@ This code can be used for generating a synthetic population of interstellar obje
 GENERATING SIZES
 
 Beside orbits, the code can optionally generate sizes (diameters) of ISOs, if required via input parameters. The sizes are generated according to (broken) power law for the size-frequency distribution (SFD). In order to generate sizes, the input parameters must be defined appropriately. This is explained through the following example:
-
-    d_ref=1000 - reference diameter for which the interstellar number-density is defined (m)
+d_ref=1000 - reference diameter for which the interstellar number-density is defined (m)
     n0=1e-2 - number of objects per cubic au whose diameters are larger than d_ref (interstellar number-density)
     d=[100, 500, 10000] - characteristic diameters of the population
     alpha=[-2, -3] - slopes of the broken power law
