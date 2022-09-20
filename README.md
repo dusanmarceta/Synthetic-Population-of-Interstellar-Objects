@@ -46,6 +46,7 @@ If the parameters d and alpha are not defined when calling the function, it will
 Input and output parameters in the function synthetic_population are (also defined in the fucntion's docstring):
 
 input:
+
 v - interstellar velocities of the ISOs (m/s)
 pv - distribution of the interstellar velocities of ISOs given in the array "v"
 n0 - interstellar number-density of ISOs for objects larger than d0 (objects per au^3)
