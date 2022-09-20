@@ -10,45 +10,40 @@ Required python libraries:
 
     numpy, scipy, random, tqdm
 
-This code can be used for the generation of the synthetic population of interstellar objects  (orbits and sizes) in arbitrary volume of space around the Sun. The only necessary assumption is that the population of the ISOs  in the interstellar space (far from any massive body) is homogenous and isotropic.
+This code can be used for generating a synthetic population of interstellar objects  (orbits and sizes) in arbitrary volume of space around the Sun. The only necessary assumption is that the population of ISOs in the interstellar space (far from any massive body) is homogenous and isotropic.
 
-The file statistical_method.py cantains all necesseary functions for the job to be done. It includes three distributions of the intestellar velocities of the ISOs which are commonly used. The code can also be used with arbitrary distribution of the interstellar velocities defined in a discrete form. For both cases the example files are provided in this distribution.
-
------------------------------------------------------------------------------------------------------------------------------------------------------------
-GENERATING ORBITS
-
-- Example of generating population with analytically defined distribution of interstellar velocities is demonstrated in example_analytical_distribution.py
-- Example of generating population with discretely defined distribution of interstellar velocities is demonstrated in example_discrete_distribution.py
+As an input, the code requires assumed distribution of ISOs in the interstellar space. This distribution can be defined analutically, but also in a discrete form. The example file "example.py" which demonstrates generation of a synthetic population (for both of these cases) is provided.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
 GENERATING SIZES
 
-The code can generate object sizes if required via input parameters. The sizes are generated according to (broken) power law for the size-frequency distribution (SFD). In order to generate sizes, the input parameters must be defined appropriately. This is explained through the following example:
+Beside orbits, the code can optionally generate sizes (diameters) of ISOs,  if required via input parameters. The sizes are generated according to (broken) power law for the size-frequency distribution (SFD). In order to generate sizes, the input parameters must be defined appropriately. This is explained through the following example:
 
-    d0=1000 - reference diameter for which the number density is defined (m)
+    d_ref=1000 - reference diameter for which the number density is defined (m)
     n0=1e-2 - number of objects per cubic au whose diameters are larger than d0
     d=[100, 500, 10000] - critical diameters of the population
     alpha=[-2, -3] - slopes of the broken power law
 
 
-In this example, the code will generate objects with sizes ranging from 100 to 10,000 m. The referent number density is 1e-2 per cubic au for objects larger than 1000 m.
+In this example, the code will generate objects with sizes ranging from 100 to 10000 m (d[0] to d[-1]). The referent number density (n0) is 1e-2 per cubic au for objects larger than 1000 m (d_ref).
 Objects within the size range [100, 500) have SFD slope of -2, while the object within the size range [500, 10000] have slope of -3.
 
 The code will first calculate the total number-density for all objects inside the defined size-range. After that, it will calculate their sizes acording to the defined SFD. 
 
-If the parameters d and alpha are not defined when calling the function, it will only generate orbits while number-density n0 is considered the total number-density.
+If the parameters d and alpha are not defined when calling the function, it will only generate orbits while number-density n0 will be considered as the total number-density.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Input and output parameters in the function synthetic_population are (also defined in the fucntion's docstring):
+Input and output parameters for the function synthetic_population are (also defined in the fucntion's docstring):
 
 input:
 
     v - interstellar velocities of the ISOs (m/s)
     pv - distribution of the interstellar velocities of ISOs given in the array "v"
     n0 - interstellar number-density of ISOs for objects larger than d0 (objects per au^3)
-    d0 - reference diemeter (m)
-    d - list of critical diameters of the population (see example above) (m)
+    d_ref - reference diemeter for SFD (m)
+    d - list of characteristic diameters of the population (see example above) (m)
     alpha - list of SFD slopes for the size ranges defined by the list d (see example above)
     rm - radius of the model sphere where the synthetic population is to be generated (au)
     dr - step for the numerical integration with respect to heliocentric distance (au) (see section 5.2 in Marceta, D.: Synthetic Population of Interstellar Objects in the Solar System, 2022)
