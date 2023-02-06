@@ -10,7 +10,7 @@ Required python libraries:
 
     numpy, scipy, random, tqdm
 
-This code can be used for generating a synthetic population of interstellar objects (orbits and sizes) in arbitrary volume of space around the Sun. The only necessary assumption is that the population of ISOs in the interstellar space (far from any massive body) is homogeneous and isotropic. The assumed distribution of interstellar velocities of ISOs has to be provided as an input. This distribution can be defined analytically, but also in a discrete form. The example file "example.py" which demonstrates generation of a synthetic population (for both of these cases) is provided.
+This code can be used for generating a synthetic population of interstellar objects (orbits and sizes) in arbitrary volume of space around the Sun. The assumed distribution of interstellar velocities of ISOs has to be provided as an input. The example file "example.py" which demonstrates generation of a synthetic population is provided.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -55,11 +55,5 @@ output:
     Omega - longitudes of ascending nodes (degrees)
     omega - arguments of perihelions (degrees)  
     D - diameters of ISOs (m) (optional)
-
-Remark:
-A potential problem can arise if the range of velocities is very large 
-(e.g. larger than several sigmas from the mode of the distribution of the interstellar velocities, pv). If this happens, scipy
-functions interpolate.splrep and interpolate.splev have problem because interpolated function pv oscilates around zero. 
-To avoid this problem, keep the range of the interstellar velocities in a reasonable range (several sigmas).
 
 
