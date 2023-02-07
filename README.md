@@ -62,12 +62,12 @@ input:
 
 output:
 
-    q - perihelion distances (au)
-    e - eccentricities
-    f - true anomalies (degrees)
-    inc - orbital inclinations (degrees)
-    Omega - longitudes of ascending nodes (degrees)
-    omega - arguments of perihelions (degrees)  
+    q - perihelion distance (au)
+    e - eccentricity
+    f - true anomalie (rad)
+    inc - orbital inclination (rad)
+    Omega - longitude of ascending node (rad)
+    omega - argument of perihelion (rad)  
     D - diameters of ISOs (m) (optional)
 
 
