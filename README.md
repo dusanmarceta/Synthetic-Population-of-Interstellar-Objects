@@ -10,7 +10,7 @@ Required python libraries:
 
     numpy, scipy, random, tqdm
 
-This code can be used for generating a synthetic population of interstellar objects (orbits and sizes) in arbitrary volume of space around the Sun. The assumed distribution of interstellar velocities of ISOs has to be provided as an input. The example file "example.py" which demonstrates generation of a synthetic population is provided.
+This code can be used for generating a synthetic population of interstellar objects (orbits and sizes) in arbitrary volume of space around the Sun according to Marceta(2023, Astronomy and Computing, vol 42). The assumed distribution of interstellar velocities of ISOs has to be provided as an input. The example file "example.py" which demonstrates generation of a synthetic population is provided.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -37,14 +37,28 @@ Input and output parameters for the function synthetic_population (also defined 
 
 input:
 
-    v - interstellar velocities of the ISOs (m/s)
-    pv - distribution of the interstellar velocities of ISOs given in the array "v"
-    n0 - interstellar number-density of ISOs for objects larger than d_ref (objects per au^3)
-    d_ref - reference diemeter for SFD (m)
-    d - list of characteristic diameters of the population (see example above) (m)
-    alpha - list of SFD slopes for the size ranges defined by the list d (see example above)
-    rm - radius of the model sphere where the synthetic population is to be generated (au)
-    dr - step for the numerical integration with respect to heliocentric distance (au) (see section 5.2 in Marceta, D.: Synthetic Population of Interstellar Objects in the Solar System, 2022)
+    rm: radius of the model sphere (au)
+    n0: number-density of the ISOs in the interstellar space (unperturbed by the Sun's gravity)
+        for objects with diameter >d0 (au^-1)
+    v_min: minimum allowed interstellar speed (m/s)
+    v_max: maximu allowed interstellar speed (m/s) 
+    u_Sun:  u-component of the Sun's velocity w.r.t. LSR (m/s) 
+    v_Sun: v-component of the Sun's velocity w.r.t. LSR (m/s) 
+    w_Sun: w-component of the Sun's velocity w.r.t. LSR (m/s) 
+    sigma_vx: standard deviation of x-component of ISOs' velocities w.r.t. LSR (m/s)
+    sigma_vy: standard deviation of y-component of ISOs' velocities w.r.t. LSR (m/s)
+    sigma_vz: standard deviation of z-component of ISOs' velocities w.r.t. LSR (m/s)
+    vd: vertex deviation (radians)
+    va:  assymetric drift (m/s)
+    R_reff:  refference radius of the Sun (m)
+    speed_resolution:  resolution of magnitudes of interstellar velocities (for numerical integration and inverse interpolation)
+    angle_resolution: resolution of galactic longitude (for numerical integration and inverse interpolation)
+    dr: increament step for heliocentric distance used for numerical integration and inverse interpolation (au)
+    d_ref:  reference ISO diameter for which n0 is defined (m)
+    d: array of diemetars for where power law for size frequency distribution (SFD) changes slope. This array also includes
+       minimum and maximum diameter od the population (m). If this array is empty (default) the function does not calculate sizes of the objects 
+       and takes n0 as the total number-density 
+    alpha: array of slopes of the SFD
 
 output:
 
