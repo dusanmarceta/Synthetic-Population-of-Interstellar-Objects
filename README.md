@@ -10,7 +10,7 @@ Required python libraries:
 
     numpy, scipy, random, tqdm
 
-This code can be used for generating a synthetic population of interstellar objects (orbits and sizes) in arbitrary volume of space around the Sun according to Marceta(2023, Astronomy and Computing, vol 42). The assumed distribution of interstellar velocities of ISOs has to be provided as an input. The example file "example.py" which demonstrates generation of a synthetic population is provided.
+This code can be used for generating a synthetic population of interstellar objects (orbits and sizes) in arbitrary volume of space around the Sun according to Marceta (2023, Astronomy and Computing, vol 42). The assumed distribution of interstellar velocities of ISOs has to be provided as an input. The example file "example.py" which demonstrates generation of a synthetic population is provided.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
