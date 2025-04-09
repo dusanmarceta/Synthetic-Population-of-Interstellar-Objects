@@ -57,7 +57,7 @@ objects larger than 1000 m. Objects within the size range [50, 500) have SFD slo
 while the object within the size range [500, 2000] have slope of -2.1.
 """
 
-q, e, f, inc, Omega, omega, D = synthetic_population(rm=10, n0=1, v_min=1e3, v_max=2e5, 
+q, e, f, inc, Omega, omega, D = synthetic_population(rm=1, n0=10, v_min=1e3, v_max=2e5, 
                                                                 u_Sun=1e4, v_Sun=1.1e4, w_Sun=7e3, 
                                                                 sigma_vx=3.1e4, sigma_vy=2.3e4, sigma_vz=1.6e4, 
                                                                 vd=np.deg2rad(7), va=0, R_reff=696340000.,

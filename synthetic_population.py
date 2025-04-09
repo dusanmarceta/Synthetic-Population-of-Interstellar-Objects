@@ -144,6 +144,12 @@ def synthetic_population(rm, n0, v_min, v_max,
     # If necessary, to avoid problems with memory the job is divided so that the larges array is smaller than the predefined value
     size=len(r_arr) * np.shape(v)[0] * np.shape(v)[1] * np.shape(v)[2]
     
+    
+    # no division
+    indices=[0, len(r_arr)]
+    new_sizes=[len(r_arr)]
+    new_size = len(r_arr)
+    
     if size>maximum_array_size:  # division 
         div=int(np.ceil(size/maximum_array_size)) # number of arrays to which the large array is divided 
         new_size=int(np.floor(len(r_arr)/div)) # new size of the arrays
@@ -155,9 +161,9 @@ def synthetic_population(rm, n0, v_min, v_max,
         indices=[0] # indices where the large array is divided into smaller ones
         for i in range(len(new_sizes)):
             indices.append(sum(new_sizes[:i+1]))       
-    else: # no division
-        indices=[0, size]
-        new_sizes=[size]
+#    else: # no division
+#        indices=[0, size]
+#        new_sizes=[size]
         
     p_r=np.zeros(len(r_arr))   
     for i in tqdm(range(len(new_sizes)), desc="1/5: Heliocentric distance"):
