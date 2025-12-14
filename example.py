@@ -41,7 +41,7 @@ Input:
     D_s (optional) - diameters of ISOs (m)
 """
 import numpy as np
-from synthetic_population import synthetic_population
+from synthetic_population import synthetic_population, synthetic_population_stationary
 
 ## Case 1: generating only orbits without generating the sizes of objects
 #q, e, f, inc, Omega, omega= synthetic_population(rm=10, n0=0.1, v_min=1e3, v_max=2e5, 
@@ -57,11 +57,22 @@ objects larger than 1000 m. Objects within the size range [50, 500) have SFD slo
 while the object within the size range [500, 2000] have slope of -2.1.
 """
 
-q, e, f, inc, Omega, omega, D = synthetic_population(rm=1, n0=10, v_min=1e3, v_max=2e5, 
+#q, e, f, inc, Omega, omega, D = synthetic_population(rm=1, n0=10, v_min=1e3, v_max=2e5, 
+#                                                                u_Sun=1e4, v_Sun=1.1e4, w_Sun=7e3, 
+#                                                                sigma_vx=3.1e4, sigma_vy=2.3e4, sigma_vz=1.6e4, 
+#                                                                vd=np.deg2rad(7), va=0, R_reff=696340000.,
+#                                                                speed_resolution=100, angle_resolution=90, dr=0.1, 
+#                                                                d_ref=1000, d=[50, 500, 2000], alpha=[-1.5, -2.1])
+
+
+
+# Case 3: generating stationary population (only orbits)
+
+## Case 1: generating only orbits without generating the sizes of objects
+q, e, f, inc, Omega, omega, v_sample, l_sample, b_sample, B_sample= synthetic_population_stationary(1., rm=1, n0=100, v_min=1e3, v_max=2e5, 
                                                                 u_Sun=1e4, v_Sun=1.1e4, w_Sun=7e3, 
                                                                 sigma_vx=3.1e4, sigma_vy=2.3e4, sigma_vz=1.6e4, 
                                                                 vd=np.deg2rad(7), va=0, R_reff=696340000.,
-                                                                speed_resolution=100, angle_resolution=90, dr=0.1, 
-                                                                d_ref=1000, d=[50, 500, 2000], alpha=[-1.5, -2.1])
+                                                                speed_resolution=100, angle_resolution=90, dr=0.1)
 
 
